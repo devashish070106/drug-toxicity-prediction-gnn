@@ -37,36 +37,36 @@ The dataset contains real-world chemical compounds annotated with toxicity-relat
 
 ## Project Structure
 
-molecular-toxicity-gnn/
-│
-├── process.py # SMILES to graph conversion
-├── model.py # GNN model definition
-├── train.py # Training pipeline
-├── test_model_cli.py # CLI for model inference
-├── requirements.txt # Project dependencies
-└── README.md
+- molecular-toxicity-gnn/
+
+- process.py # SMILES to graph conversion
+- model.py # GNN model definition
+- train.py # Training pipeline
+- test_model_cli.py # CLI for model inference
+- equirements.txt # Project dependencies
+- README.md
 
 ## Training the Model
-To train the model on the Tox21 dataset:
-python train.py
-This script loads the dataset, balances the classes, trains the GNN model, and saves the trained weights.
+- To train the model on the Tox21 dataset:
+- python train.py
+- This script loads the dataset, balances the classes, trains the GNN model, and saves the trained weights.
 ## Running Inference
-After training, you can test the model using the command-line interface:
-python test_model_cli.py
-You will be prompted to enter a SMILES string, and the model will output the predicted toxicity probability.
+- After training, you can test the model using the command-line interface:
+- python test_model_cli.py
+- You will be prompted to enter a SMILES string, and the model will output the predicted toxicity probability.
 
 ## Limitations
 
-Fixed maximum number of atoms per molecule
-Limited atom feature representation
-No explicit edge features
-No global pooling mechanism
-Training performed without batching
+- Fixed maximum number of atoms per molecule
+- Limited atom feature representation
+- No explicit edge features
+- No global pooling mechanism
+- Training performed without batching
 
 ## Future Improvements
 
-Replace flattening with global pooling
-Use advanced GNN layers such as GAT or GIN
-Add ROC-AUC evaluation metric
-Improve atom and bond feature representations
-Enable GPU acceleration and mini-batch training
+- Replace flattening with global pooling
+- Use advanced GNN layers such as GAT or GIN
+- Add ROC-AUC evaluation metric
+- Improve atom and bond feature representations
+- Enable GPU acceleration and mini-batch training
